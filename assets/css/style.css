@@ -1,0 +1,83 @@
+body {
+	background-color: #d9b3ff;
+}
+
+#container {
+	margin: auto;
+	width: 50%;
+	background-color: #ffffff55;
+}
+
+/*Top Banner*/
+header {
+	border-bottom: 10px dashed #fff;
+	/*border-image-source: url("../../assets/images/border.png");
+	border-image-repeat: 100;*/
+}
+
+img {
+	width: 100%;
+	height: 100%;
+}
+
+#banner {
+	position: relative;
+	width: 90%;
+	display: block;
+	margin: auto;
+}
+
+#back {
+	float: left;
+	width: 5%;
+	height: 5%;
+}
+
+/*game section*/
+div {
+	font-size: 18px;
+	font-weight: bold;
+	color: #660099;
+}
+
+#game-section {
+	background-color: #ffffff55;
+	margin-bottom: 5%;
+	padding: 2%;
+	height: 400px;
+	background-image: url("../../assets/images/townsville.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.topRight {
+	float: right;
+	margin-right: 2%;
+	font-size: 20px;
+	background-color: #ffffff55;
+	width: 15%; 
+}
+
+.alignTextRight {
+	float: right;
+	text-align: right;
+}
+
+#guess-section {
+	text-align: center;
+	clear: both;
+	width: 100%
+	background-color: #ffffff55;
+}
+
+/*Footer*/
+footer {
+	background-color: #330066;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+	padding: 1%;
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+}
