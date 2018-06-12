@@ -3,7 +3,6 @@
 	var lifePoints = 6;
 
 	var gameStart = false; //stores boolean if game start or not
-	var start; //stores the string of whether the game started or not
 
 	//stores the possible answers
 	var answers = ["bubbles", "blossom", "buttercup", "ProfessorUtonium", "Major", "MissBellum", "MojoJojo", "Him", "Octi"];
@@ -12,6 +11,7 @@
 	var userGuess = []; //stores user's guess
 	var guessAns; //stores the _ according to the length of the answer and fills the array when found right answer
 
+	var start = document.querySelector("#start");
 	var score_div = document.querySelector("#winScore");
 	var life_div = document.querySelector("#Life");
 	var guesses = document.querySelector("#guesses");
@@ -20,6 +20,7 @@
 
 	score_div.innerText = score;
 	life_div.innerText = lifePoints;
+	start.innerText = "Press any key to start game";
 
 	//generates a random answer from the answer array
 	function randomAns(){
@@ -28,6 +29,7 @@
 		
 		return answers[randomIndex].toLowerCase();
 	}
+
 	//generates the _ to show the user what word they need to guess
 	function answerGenerator(){
 		currentAns = randomAns();
@@ -44,9 +46,18 @@
 		var key = event.key;
 		userGuess.push(event.key);
 
+		//detects if user pressed any key to start the game
+		if(!gameStart){
+			answerGenerator();
+			start.innerText = " GAME STARTED";
+			gameStart = true;
+		}
+
+
 	}
 
-	//press any key to start game
+	document.onkeyup = logAndCompareGuess;
+
 	//stores a set of answer for user to guess
 	//stores user's guess and if the user has already guess(indexOf) the letter do not subtract guess count left
 	//if user guesses wrong subtract guess count left
