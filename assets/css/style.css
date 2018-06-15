@@ -1,5 +1,8 @@
 body {
 	background-color: #d9b3ff;
+	background-image: url("../../assets/images/townsville.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 #container {
@@ -34,14 +37,17 @@ div {
 	color: #660099;
 }
 
+section {
+	height: 225px;
+	margin: auto;
+	text-align: center;
+}
+
 #game-section {
 	background-color: #ffffff55;
 	margin-bottom: 5%;
 	padding: 20px;
 	height: 450px;
-	background-image: url("../../assets/images/townsville.jpg");
-	background-size: cover;
-	background-repeat: no-repeat;
 	position: static;
 }
 
@@ -49,7 +55,6 @@ div {
 	float: right;
 	margin-right: 2%;
 	font-size: 20px;
-	background-color: #ffffff55;
 	width: 15%;
 }
 
@@ -59,13 +64,13 @@ div {
 }
 
 #guess-section {
+	overflow: hidden;
 	text-align: center;
 	clear: both;
 	position: relative;
-	margin-top: 25%;
+	float: right;
 	padding: 20px 0;
 	width: 100%;
-	background-color: #ffffff55;
 	text-shadow: 3px 3px 2px orange;
 }
 
